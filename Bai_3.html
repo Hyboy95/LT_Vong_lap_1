@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_3</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  // let text = "0,1"
+  // let a = 0;
+  // let b = 1;
+  // for (let i = 0; i < 18; i++) {
+  //   let c = a + b;
+  //   text += "," + c;
+  //   a = b;
+  //   b = c;
+  // }
+  // document.write(text);
+
+  //in dãy số fibonacci sao cho số cuối cùng nhỏ hơn M:
+    let M = +prompt('Nhập vào số M');
+    let text = "0,1"
+    let a = 0;
+    let b = 1;
+    for (let i = 0; i < (M-2); i++){
+         let c = a + b;
+        if (c < M) {
+            text += "," + c;
+            a = b;
+            b = c;
+        }
+    }
+    document.write(text);
+</script>

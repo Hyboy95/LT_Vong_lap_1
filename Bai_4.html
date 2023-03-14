@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_4</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //C1: Dùng for:
+
+    // let a = 0;
+    // let b = 1;
+    // let text = '';
+    // for (let i = 0 ; ; i++) {
+    //     let c = a + b;
+    //     text = c;
+    //     if ( c % 5 === 0) {
+    //         document.write("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là " + text);
+    //         break;
+    //     }
+    //     a = b;
+    //     b = c;
+    // }
+
+    //C2: Dùng while:
+    let a = 0;
+    let b = 1;
+    let c = 1;
+    while ( c % 5 !== 0) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    document.write("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là " + c);
+</script>

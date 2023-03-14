@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_8</title>
+</head>
+<body>
+<button id="btn">Bắt đầu</button>
+</body>
+</html>
+<script>
+  let btn = document.getElementById("btn");
+  btn.addEventListener('click', on_click);
+
+  function on_click() {
+    let fromIdx = +prompt("Nhập vào giá trị đầu khoảng");
+    let toIdx = +prompt("Nhập vào giá trị cuối khoảng");
+    let guessNum = +prompt("Nhập vào số bạn đoán");
+    let randomNum = Math.floor(Math.random() * (toIdx - (fromIdx+1))) + (fromIdx+1);
+    let count = 1;
+
+    while ( guessNum > fromIdx && guessNum < toIdx && count < 3) {
+      if (randomNum === guessNum) {
+        alert("Chúc mừng bạn đã đoán đúng");
+        break;
+      } else if (randomNum > guessNum) {
+        alert(" Số bạn đoán nhỏ hơn số cần tìm")
+      } else {
+        alert(" Số bạn đoán lớn hơn số cần tìm")
+      }
+      guessNum = +prompt("Nhập lại số bạn đoán");
+      count ++;
+    }
+    if (count === 3) {
+      alert(" Số lần đoán của bạn đã hết");
+    }
+    if (guessNum <= fromIdx || guessNum >= toIdx) {
+      alert(" Số bạn đoán ngoài khoảng dự đoán");
+    }
+  }
+</script>
